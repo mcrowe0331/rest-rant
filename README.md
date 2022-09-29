@@ -15,3 +15,7 @@ Method      Path                        Purpose
 -POST       /places/:id/rant            Create a rant(comment) about a particular place 
 -DELETE     /places/:id/rant/:rantId    Delete a rant(comment) about a particular place
 -GET        *                           404 page (matches any route not defined about)
+
+CSS Framework
+Stack, Express, node.js
+Server-side Rendering JSX
