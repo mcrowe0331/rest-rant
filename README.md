@@ -7,9 +7,10 @@ CSS Framework - Bootstrap
 Stack, Express, node.js
 Server-side Rendering JSX
 
-## Routes
+# Routes
+
 | Method    | Path                      |Purpose |
-| --------  | -----------------------------------|
+| --------  | --------------------------|--------|
 |GET        | /                           | Home Page|
 |Get        | /places                     | Places index page|
 |POST       | /places                     | Create new place|
