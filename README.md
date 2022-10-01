@@ -3,7 +3,12 @@
 
 REST-Rant is an app where users can review restaurants.
 
-Method      Path                        Purpose
+CSS Framework - Bootstrap
+Stack, Express, node.js
+Server-side Rendering JSX
+
+## Routes
+| Method      | Path                        |Purpose
 -GET        /                           Home Page
 -Get        /places                     Places index page
 -POST       /places                     Create new place
@@ -16,6 +21,4 @@ Method      Path                        Purpose
 -DELETE     /places/:id/rant/:rantId    Delete a rant(comment) about a particular place
 -GET        *                           404 page (matches any route not defined about)
 
-CSS Framework
-Stack, Express, node.js
-Server-side Rendering JSX
+
