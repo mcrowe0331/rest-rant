@@ -27,7 +27,7 @@ Server-side Rendering JSX
 **places**
 
 |Field | Type |
-| -----|----------|
+|-----|----------|
 |id     | Object id|
 |name   | String|
 |city   |  String|
