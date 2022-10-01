@@ -8,8 +8,9 @@ Stack, Express, node.js
 Server-side Rendering JSX
 
 ## Routes
-| Method      | Path                        |Purpose
--GET        /                           Home Page
+| Method    | Path                      |Purpose |
+| --------  | -----------------------------------|
+|GET        |/                           |Home Page
 -Get        /places                     Places index page
 -POST       /places                     Create new place
 -GET        /places/new                 Form page for creating a new place
@@ -25,6 +26,7 @@ Server-side Rendering JSX
 **places**
 
 |Field | Type |
+| -----|----------|
 |id     | Object id|
 |name   | String|
 |city   |  String|
