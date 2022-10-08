@@ -18,7 +18,6 @@
   "nodemonConfig": {
     "ext": "js,html,json,jsx,mjs"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mcrowe0331/rest-rant.git"
