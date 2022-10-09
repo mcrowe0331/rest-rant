@@ -9,7 +9,7 @@ router.get('/id', (req, res) => {
 }) 
 
 router.get('/', (req, res) => {
-  res.render('GET/places')
+  res.render('/places')
 })
 
 router.get('/', (req, res) => {
