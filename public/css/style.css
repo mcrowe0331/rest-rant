@@ -1,0 +1,23 @@
+h1 {
+    text-align: center;
+    color: cornflowerblue;
+  }
+
+  .btn-primary {
+    text-align: center;
+    background-color: cornflowerblue;
+    color: white
+  }
+
+  div {
+    width: 300px;
+    height: auto;
+    padding: 10px;
+  }
+
+  img {
+    max-width: 100%
+  }
+
+
+  
