@@ -12,6 +12,12 @@ router.get('/', (req, res) => {
   res.render('/places')
 })
 
+router.post('/', (req, res) => {
+  console.log(req.body)
+  res.send('POST /places')
+})
+
+
 router.get('/', (req, res) => {
         let places = [{
                 name: 'H-Thai-ML',
