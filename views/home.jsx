@@ -6,8 +6,8 @@ function home () {
     return (
         <Def>
             <main>
-                <h1>HOME</h1>
-    <div>
+                <h1>REST-Rant</h1>
+             <div>
       <img src="/images/FruitSmoothie.jpg" alt="Smoothie" />
       <div>
       Photo by <a href="https://unsplash.com/@saracervera?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sara Cervera</a> on <a href="https://unsplash.com/s/photos/smoothie?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
