@@ -4,14 +4,14 @@ const places= require('../models/places.js')
 router.get('/new', (req, res) => {
   res.render('places/new')
 })
-
-router.get('/id', (req, res) => {
-  res.render('/places/id')
-}) 
-
 router.get('/', (req, res) => {
-  res.render('/places')
+             
+  res.render('places/index', {places})
 })
+// router.get('/:id', (req, res) => {
+//   res.render('/places/id')
+// }) 
+
 
 router.post('/', (req, res) => {
   console.log(req.body)
@@ -26,28 +26,10 @@ router.post('/', (req, res) => {
     req.body.state = 'USA'
   }
   places.push(req.body)
-  res.redirect('/places')
+  res.redirect('/places/index')
 })
 
 
-
-router.get('/', (req, res) => {
-        let places = [{
-                name: 'H-Thai-ML',
-                city: 'Seattle',
-                state: 'WA',
-                cuisines: 'Thai, Pan-Asian',
-                pic: '/images/Thai-Bowl.jpg'
-              }, {
-                name: 'Coding Cat Cafe',
-                city: 'Phoenix',
-                state: 'AZ',
-                cuisines: 'Coffee, Bakery',
-                pic: '/images/Coffee.jpg'
-              }]
-              
-        res.render('places/index', {places})
-})
 
 // More code here in a moment
 
