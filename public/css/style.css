@@ -1,3 +1,9 @@
+body {
+  background-color: lightblue;
+  text-align: center;
+}
+
+
 nav {
   background-color: cornflowerblue;
   padding: 10px;
@@ -21,11 +27,6 @@ nav a {
 nav a:hover {
   color: pink;
   text-decoration: none;
-}
-
-body {
-  background-color: lightblue;
-  text-align: center;
 }
 
 main {
@@ -53,7 +54,7 @@ h1 {
   }
 
   img {
-    max-width: 100%;
+    height: 20em;
   }
 
 
