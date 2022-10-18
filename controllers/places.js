@@ -1,6 +1,6 @@
 const router = require('express').Router()
 const db = require('../models')
-const places= require('../models/place.js (Schema)')
+const places= require('../models/places.js')
 
 
 router.get('/', (req, res) => {
@@ -9,7 +9,6 @@ router.get('/', (req, res) => {
       res.render('places/index', { places })
     })
     .catch(err => {
-      console.log(err) 
       res.render('error404')
     })
 })
@@ -26,12 +25,13 @@ router.post('/', (req, res) => {
           message += `${field} was ${err.errors[field].value}. `
           message += `${err.errors[field].message}`
       }
-      console.log('Validation error message', message)
       res.render('places/new', { message })
-  }
-  else {
-      res.render('error404')
-  }
+    }
+    else {
+        res.render('error404')
+    }
+  })
+})
   
 
 // New
@@ -71,6 +71,7 @@ router.post('/:id/rant', (req, res) => {
 router.delete('/:id/rant/:rantId', (req, res) => {
     res.send('GET /places/:id/rant/:rantId stub')
 })
+  
 
 module.exports = router
 

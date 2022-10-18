@@ -8,4 +8,4 @@ mongoose.connect(process.env.MONGO_URI, {
 
 
   //Connection information
-module.exports.Place = require('./place.js (Schema)')
+module.exports.Place = require('./places')
