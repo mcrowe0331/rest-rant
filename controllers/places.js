@@ -14,6 +14,9 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
+  if (req.body.pic === '') { req.body.pic = undefined }
+  if (req.body.city === '') { req.body.city = undefined }
+  if (req.body.state === '') { req.body.state = undefined }
   db.Place.create(req.body)
   .then(() => {
       res.redirect('/places')
@@ -33,7 +36,6 @@ router.post('/', (req, res) => {
   })
 })
   
-
 // New
 router.get('/new', (req, res) => {
   res.render('places/new')
@@ -68,7 +70,7 @@ router.put('/:id', (req, res) => {
 
 router.delete('/:id', (req, res) => {
   db.Place.findByIdAndDelete(req.params.id)
-  .then(place => {
+  .then(() => {
       res.redirect('/places')
   })
   .catch(err => {
@@ -89,7 +91,8 @@ router.get('/:id/edit', (req, res) => {
 })
 
 router.post('/:id/comment', (req, res) => {
-  console.log(req.body)
+  console.log('post comment', req.body)
+  if (req.body.author === '') {req.body.author = undefined }
   req.body.rant = req.body.rant ? true : false
   db.Place.findById(req.params.id)
   .then(place => {
@@ -110,14 +113,17 @@ router.post('/:id/comment', (req, res) => {
   })
 })
 
-router.post('/:id/rant', (req, res) => {
-  res.send('GET /places/:id/rant stub')
+router.delete('/:id/comment/:commentId', (req, res) => {
+  db.Comment.findByIdAndDelete(req.params.commentId)
+      .then(() => {
+          console.log('Success')
+          res.redirect(`/places/${req.params.id}`)
+      })
+      .catch(err => {
+          console.log('err', err)
+          res.render('error404')
+      })
 })
-
-router.delete('/:id/rant/:rantId', (req, res) => {
-    res.send('GET /places/:id/rant/:rantId stub')
-})
-  
 
 module.exports = router
 
